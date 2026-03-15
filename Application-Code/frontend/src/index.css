@@ -1,40 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ── Reset ───────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Base ────────────────────────────────── */
+html,
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.app-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Optional: Add some more global styles for typography */
+#root {
+  min-height: 100vh;
+}
+
+/* ── Typography ──────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 a {
-    color: #333;
-    text-decoration: none;
+  color: #a78bfa;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
 a:hover {
-    color: #6e8efb;
+  color: #c4b5fd;
 }
 
-/* Styling for any code elements */
+/* ── Scrollbar ───────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(167, 139, 250, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(167, 139, 250, 0.5);
+}
+
+/* ── Selection ───────────────────────────── */
+::selection {
+  background: rgba(124, 58, 237, 0.4);
+  color: #ffffff;
+}
+
+/* ── Focus ───────────────────────────────── */
+:focus-visible {
+  outline: 2px solid rgba(167, 139, 250, 0.6);
+  outline-offset: 2px;
+}
+
+/* ── Code ────────────────────────────────── */
 code {
-    background-color: #eee;
-    padding: 2px 4px;
-    border-radius: 4px;
-    font-family: 'Courier New', monospace;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875em;
 }
 
